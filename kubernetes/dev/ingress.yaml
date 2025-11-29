@@ -1,5 +1,5 @@
-Kind: Ingress
-apiVersion: networking.io/V1
+kind: Ingress
+apiVersion: networking.k8s.io/v1
 metadata:
   name: java-app-ingress
   namespace: dev
@@ -8,12 +8,12 @@ metadata:
 spec:
   rules:
     - host: myapp
-    http:
-    - path: /app1
-      pathType: prefix
-      backend:
-        service: 
-          name: java-app
-          port: 
-            number: 80
-  
+      http:
+        paths:
+          - path: /app1
+            pathType: Prefix
+            backend:
+              service: 
+                name: java-app
+                port: 
+                  number: 80
