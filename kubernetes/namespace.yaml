@@ -1,0 +1,12 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: dev
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+    name: prod
+
+
+#this namespace has two names: 1.dev and 2.  prod
